@@ -259,7 +259,7 @@
 }
 
 #creative-collective {
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   background-color: #fdfdfd;
 }
 
@@ -357,18 +357,17 @@
 }
 
 #parallax {
+  background-image: url("../img/hero2.jpg");
   position: relative;
-  padding: 80px 0;
+  background-attachment: fixed;
   height: 454px;
-  overflow: hidden;
 }
 
 #parallax .overlay {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  width: 100%;
+  height: 454px;
   background-color: #1f1f1fb7;
 }
 
@@ -404,5 +403,57 @@
   font-size: 1em;
   line-height: 1.625em;
   font-family: "Lora", "Helvetica", "Arial", sans-serif;
+}
+
+#our-expertise {
+  padding: 120px 0;
+  background-color: #fdfdfd;
+}
+
+#our-expertise .expertise-header h2 {
+  color: #343434;
+  font-size: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.421875em;
+}
+
+#our-expertise .expertise-header p {
+  color: #767676;
+  font-size: 1.4375em;
+  font-family: "Lora", "Helvetica", "Arial", sans-serif;
+  line-height: 1.69565217em;
+}
+
+#our-expertise .expertise-content {
+  margin-top: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#our-expertise .expertise-content .content-left i {
+  color: #425cbb;
+  line-height: 1em;
+  font-size: 2.8125em;
+}
+
+#our-expertise .expertise-content .content-right {
+  margin-left: 25px;
+}
+
+#our-expertise .expertise-content .content-right h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 0.625em;
+}
+
+#our-expertise .expertise-content .content-right p {
+  padding-top: 25px;
+  color: #767676;
+  font-weight: 400;
+  font-family: "Lora", "Helvetica", "Arial", sans-serif;
+  line-height: 1.6em;
 }
 /*# sourceMappingURL=style.css.map */
