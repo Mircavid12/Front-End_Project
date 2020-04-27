@@ -1,5 +1,4 @@
 var deliveredBtns = document.querySelectorAll(".digital-delivered-buttons li");
-
 deliveredBtns.forEach(element => {
     $(element).click(function(){
         var activeBtn = document.querySelector(".active");
@@ -8,47 +7,56 @@ deliveredBtns.forEach(element => {
     })
 });
 
-var showAll = document.querySelector(".showAll");
-var branding = document.querySelector(".branding");
-var digital = document.querySelector(".digital");
-var packaging = document.querySelector(".packaging");
-
-var digitalContent1 = document.querySelector(".digital-content1");
-var digitalContent2 = document.querySelector(".digital-content2");
-var digitalContent3 = document.querySelector(".digital-content3");
-var digitalContent4 = document.querySelector(".digital-content4");
-var digitalContent5 = document.querySelector(".digital-content5");
-var digitalContent6= document.querySelector(".digital-content6");
-
-$(showAll).click(function(){
-    $(digitalContent1).css("display","block");
-    $(digitalContent2).css("display","block");
-    $(digitalContent3).css("display","block");
-    $(digitalContent4).css("display","block");
-    $(digitalContent5).css("display","block");
-    $(digitalContent6).css("display","block");
-})
-$(branding).click(function(){
-    $(digitalContent1).css("display","none");
-    $(digitalContent2).css("display","block");
-    $(digitalContent3).css("display","block");
-    $(digitalContent4).css("display","none");
-    $(digitalContent5).css("display","block");
-    $(digitalContent6).css("display","none");
-})
-$(digital).click(function(){
-    $(digitalContent1).css("display","block");
-    $(digitalContent2).css("display","none");
-    $(digitalContent3).css("display","none");
-    $(digitalContent4).css("display","none");
-    $(digitalContent5).css("display","none");
-    $(digitalContent6).css("display","block");
-})
-$(packaging).click(function(){
-    $(digitalContent1).css("display","none");
-    $(digitalContent2).css("display","none");
-    $(digitalContent3).css("display","none");
-    $(digitalContent4).css("display","block");
-    $(digitalContent5).css("display","none");
-    $(digitalContent6).css("display","none");
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if($("html").scrollTop() >= 50){
+            console.log("dasdaa")
+        $(".navbar").addClass("scrolled");
+        $(".navbar a").css("color","#232323");
+        $(".navbar-brand2").css("display","block");
+        $(".navbar-right-side ul li a i").css("color","#343434");
+        $(".navbar-right-side").css("border-left","1px solid rgba(0, 0, 0, 0.05)");
+        }
+        else{
+            $(".navbar").removeClass("scrolled");
+            $(".navbar-brand2").css("display","none");
+            $(".navbar-right-side ul li a i").css("color","#f8f8f8");
+            $(".navbar-right-side").css("border-left","1px solid rgba(255, 255, 255, 0.1)");
+            $(".navbar a").css("color","#f8f8f8");
+        }
+    })
+    
+    $(".showAll").click(function(){
+        $(".digital-content1").css("display","block");
+        $(".digital-content2").css("display","block");
+        $(".digital-content3").css("display","block");
+        $(".digital-content4").css("display","block");
+        $(".digital-content5").css("display","block");
+        $(".digital-content6").css("display","block");
+    })
+    $(".branding").click(function(){
+        $(".digital-content1").css("display","none");
+        $(".digital-content2").css("display","block");
+        $(".digital-content3").css("display","block");
+        $(".digital-content4").css("display","none");
+        $(".digital-content5").css("display","block");
+        $(".digital-content6").css("display","none");
+    })
+    $(".digital").click(function(){
+        $(".digital-content1").css("display","block");
+        $(".digital-content2").css("display","none");
+        $(".digital-content3").css("display","none");
+        $(".digital-content4").css("display","none");
+        $(".digital-content5").css("display","none");
+        $(".digital-content6").css("display","block");
+    })
+    $(".packaging").click(function(){
+        $(".digital-content1").css("display","none");
+        $(".digital-content2").css("display","none");
+        $(".digital-content3").css("display","none");
+        $(".digital-content4").css("display","block");
+        $(".digital-content5").css("display","none");
+        $(".digital-content6").css("display","none");
+    })
+    
 })
