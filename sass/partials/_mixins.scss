@@ -3,3 +3,18 @@
     -ms-transition: $property;
     transition: $property;
 }
+
+@mixin heading1($heading1,$title-color,$title-font){
+    color: $title-color;
+    font-size: $heading1;
+    font-family: $title-font;
+    font-weight: 700;
+    line-height: 1.421875em;
+}
+
+@mixin heading2($heading2,$text-color,$font-family){
+    color: $text-color;
+    font-size: $heading2;
+    font-family: $font-family;
+    line-height: 1.69565217em;
+}
