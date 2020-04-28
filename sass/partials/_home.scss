@@ -2,6 +2,7 @@
     z-index: 3;
     position: relative;
     .navbar{
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
         background-color: transparent;
         height: 65px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -369,4 +370,43 @@
             }
         }
     }
+}
+
+#testimonial{
+    margin-top: 180px;
+    height: 405px;
+    background-color: #f4f4f4;
+    position: relative;
+    .testimonial-text{
+        margin-top: 120px;
+        blockquote{
+            font-size: $heading2;
+            color: $text-color;
+            font-weight: 400;
+            font-style: italic;
+            font-family: $font-family;
+        }
+        h5{
+            font-size: $text-size;
+            color: $title-color;
+            font-weight: 600;
+            font-family: $title-font;
+            padding-top: 10px;
+        }
+        span{
+            font-size: $heading4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+    }
+    img{
+        max-width: 100%;
+        position: absolute;
+        top: -82px;
+    }
+}
+
+#news{
+    padding: 100px 0;
 }

@@ -4,6 +4,8 @@
 }
 
 #navigation .navbar {
+  -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.07);
   background-color: transparent;
   height: 65px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -455,5 +457,49 @@
   font-weight: 400;
   font-family: "Lora", "Helvetica", "Arial", sans-serif;
   line-height: 1.6em;
+}
+
+#testimonial {
+  margin-top: 180px;
+  height: 405px;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+#testimonial .testimonial-text {
+  margin-top: 120px;
+}
+
+#testimonial .testimonial-text blockquote {
+  font-size: 1.4375em;
+  color: #767676;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Lora", "Helvetica", "Arial", sans-serif;
+}
+
+#testimonial .testimonial-text h5 {
+  font-size: 1em;
+  color: #343434;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 10px;
+}
+
+#testimonial .testimonial-text span {
+  font-size: 0.625em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+#testimonial img {
+  max-width: 100%;
+  position: absolute;
+  top: -82px;
+}
+
+#news {
+  padding: 100px 0;
 }
 /*# sourceMappingURL=style.css.map */
