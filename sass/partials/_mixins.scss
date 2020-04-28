@@ -18,3 +18,9 @@
     font-family: $font-family;
     line-height: 1.69565217em;
 }
+
+@mixin buttons () {
+    border-radius: 50px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}

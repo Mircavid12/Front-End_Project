@@ -113,10 +113,8 @@
             color: $primary-color;
             background-color: $secondary-color;
             padding: 18px 52px;
-            border-radius: 50px;
             font-size: $heading4;
-            letter-spacing: 2px;
-            text-decoration: none;
+            @include buttons();
             @include transition(all 0.7s);
             &:hover{
                 background-color: #5974d3;
@@ -409,4 +407,106 @@
 
 #news{
     padding: 100px 0;
+    background-color: #f8f8f8;
+    .news-header{
+        h2{
+            @include heading1($heading1,$title-color,$title-font);
+        }
+        p{
+            @include heading2($heading2,$text-color,$font-family);
+        }
+    }
+    .news-content{
+        background-color: white;
+        margin-top: 100px;
+        padding-bottom: 40px;
+        cursor: pointer;
+        @include transition(all 0.2s);
+        .card-image{
+            img{
+                max-width: 100%;
+            }
+        }
+        .card-content{
+            margin: 25px;
+            h6{
+                color: $text-color;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 400;
+                font-size: $heading4;
+                padding: 10px 0;
+            }
+            h5{
+                font-weight: 400;
+                color: #232323;
+                font-size: $text-size;
+                line-height: 1.625em;
+                padding-bottom: 40px;
+            }
+            .content-footer{
+                border-top: 1px solid rgba(0, 0, 0, 0.137);
+                .span1{
+                    position: absolute;
+                    bottom: 25px;
+                    color: $text-color;
+                    font-size: $heading4;
+                    font-style: italic;
+                }
+                .span2{
+                    position: absolute;
+                    bottom: 25px;
+                    left: 15%;
+                    color: $text-color;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: $heading4;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0px 0px 11px 2px #e7e7e7;
+        }
+    }
+    .view-blog{
+        margin-top: 100px;
+        a{
+            font-family: $title-font;
+            padding: 18px 50px;
+            border: 2px solid rgba(35, 35, 35, 0.1);
+            color: $title-color;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: $heading4;
+            @include buttons();
+            @include transition(all 0.2s);
+            &:hover{
+                border-color: $title-color;
+            }
+        }
+    }
+}
+
+#carousel{
+    padding: 70px 0;
+    background-color: #f4f4f4;
+    .owl-carousel{
+        margin-left: 3%;
+        .item{
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            img{
+                max-width: 100%;
+                color: $text-color;
+                opacity: 0.3;
+                max-height: 1.625em;
+                max-width: 78%;
+            }  
+            .partner1, .partner4{
+                width: 25%;
+            }
+        }
+    }
 }
