@@ -9,8 +9,7 @@ deliveredBtns.forEach(element => {
 
 $(document).ready(function(){
     $(window).scroll(function(){
-        if($("html").scrollTop() >= 50){
-            console.log("dasdaa")
+        if($("html").scrollTop() >= 180){
         $(".navbar").addClass("scrolled");
         $(".navbar a").css("color","#232323");
         $(".navbar-brand2").css("display","block");
