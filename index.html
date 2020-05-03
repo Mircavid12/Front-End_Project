@@ -13,19 +13,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+    
     <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="sass/jquery.fancybox.min.css">
 </head>
 
 <body>
-    <div class="container-fluid fixed-top p-0">
+    <div class="container-fluid search-pop-up fixed-top p-0">
         <div class="row">
             <div class="col-lg-12">
-                <div class="search-pop-up d-flex justify-content-center align-items-center">
+                <div class="pop-up d-flex justify-content-center align-items-center">
                         <i class="fas fa-times times-icon"></i>
                         <i class="fas fa-search search-icon"></i>
                         <input type="text" placeholder="Type your search and hit enter">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="interface">
+        <div class="card-title d-flex">
+            <h5>Your Cart</h5>
+            <i class="fas fa-times interface-times-icon"></i>
+        </div>
+        <hr>
+        <div class="card-items">
+            <ul>
+                <li>
+                    <div class="card-item-img">
+                        <a href=""><img src="img/product-small-1.png" alt=""></a>
+                    </div>
+                    <div class="item-detail">
+                        <span>Dave Wool Beanie</span>
+                        <h6>1 x $39.00</h6>
+                    </div>
+                    <div class="item-remove">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </li>
+                <li>
+                    <div class="card-item-img">
+                        <a href=""><img src="img/product-small-2.png" alt=""></a>
+                    </div>
+                    <div class="item-detail">
+                        <span>Rose Tinted Glasses</span>
+                        <h6>1 x $89.00</h6>
+                    </div>
+                    <div class="item-remove">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="card-total">
+            <h5>Subtotal:</h5>
+            <span>$128.00</span>
+        </div>
+        <div class="card-button text-center">
+            <a href="">Checkout Now</a>
         </div>
     </div>
     <header>
@@ -69,10 +114,10 @@
                     <div class="navbar-right-side ml-auto">
                         <ul class="d-flex">
                             <li>
-                                <a href=""><i class="fas fa-search"></i></a>
+                                <a href="" class="search-nav-btn"><i class="fas fa-search"></i></a>
                             </li>
                             <li>
-                                <a href=""><i class="fas fa-trash-restore"></i></a>
+                                <a href="" class="interface-nav-btn"><i class="fas fa-trash-restore"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -81,15 +126,16 @@
             </nav>
         </section>
     </header>
-
+   
     <main>
+            
         <section id="intro">
             <div class="container intro-content">
-                <div class="row text-center">
-                    <div class="col-lg-6 text-right">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 text-right">
                         <img src="img/logo-light.png" alt="">
                     </div>
-                    <div class="col-lg-6 ">
+                    <div class="col-lg-6 col-sm-12">
                         <p class="intro-text text-left">
                             A beautiful collection of <br>
                             hand-crafted web components
@@ -99,9 +145,8 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="intro-video mt-5">
-                            <a href=""><i class="fas fa-caret-right"></i> WATCH THE OVERVIEW</a>
+                            <a data-fancybox="gallery" href="https://www.youtube.com/embed/6-WynmoIXOc"><i class="fas fa-caret-right"></i> WATCH THE OVERVIEW</a>
                         </div>
-
                     </div>
                 </div>
                 <div class="row">
@@ -116,7 +161,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="digital-delivered">
             <div class="container-fluid">
                 <div class="row">
@@ -568,7 +613,7 @@
                         </span>
                     </div>
                     <div class="col-lg-6">
-                        <i class="fas fa-angle-up"></i>
+                        <i class="fas fa-angle-up scrolling-top"></i>
                     </div>
                 </div>
             </div>
@@ -580,6 +625,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 </body>
 
 </html>

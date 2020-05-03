@@ -86,7 +86,6 @@ $(document).ready(function(){
         $(".shop-content12").css("display","block");
     })
     $(".accessories").click(function(){
-        console.log("asas");
         $(".shop-content1").css("display","block");
         $(".shop-content2").css("display","none");
         $(".shop-content3").css("display","none");
@@ -101,7 +100,6 @@ $(document).ready(function(){
         $(".shop-content12").css("display","none");
     })
     $(".apparel").click(function(){
-        console.log("asas");
         $(".shop-content1").css("display","none");
         $(".shop-content2").css("display","block");
         $(".shop-content3").css("display","none");
@@ -116,7 +114,6 @@ $(document).ready(function(){
         $(".shop-content12").css("display","block");
     })
     $(".bags").click(function(){
-        console.log("asas");
         $(".shop-content1").css("display","none");
         $(".shop-content2").css("display","none");
         $(".shop-content3").css("display","block");
@@ -129,6 +126,29 @@ $(document).ready(function(){
         $(".shop-content10").css("display","none");
         $(".shop-content11").css("display","none");
         $(".shop-content12").css("display","none");
+    })
+    $(".search-nav-btn").click(function(){
+        event.preventDefault();
+        $(".search-pop-up").css("display","block");
+    })
+    $(".times-icon").click(function(){
+        $(".search-pop-up").css("display","none");
+    })
+    $(document).keyup(function(e) { 
+        if(e.which == 27){
+            $(".search-pop-up").css("display","none");
+        }
+    });
+    $(".interface-nav-btn").click(function(){
+        event.preventDefault();
+        $(".interface").css("display","block");
+        $(".interface").css("right","0");
+    })
+    $(".interface-times-icon").click(function(){
+        $(".interface").css("display","none");
+    })
+    $(".scrolling-top").click(function(){
+        $("html").scrollTop(0);
     })
     $("#carousel .owl-carousel").owlCarousel({
         loop:true,
