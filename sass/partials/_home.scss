@@ -1,3 +1,70 @@
+.search-pop-up{
+    z-index: 5;
+    width: 100%;
+    height: 864px;
+    background-color: black;
+    opacity: 0.8;
+    .search-icon{
+        position: absolute;
+        left: 28%;
+        color: #f5f5f5;
+        z-index: 7;
+        font-size: 20px;
+    }
+    input{
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        height: 52px;
+        border-radius: 50px;
+        padding-left: 4.0625em;
+        width: 48%;
+        &:focus{
+            outline: none;
+        }
+    }
+    .times-icon{
+        position: absolute;
+        top: 8px;
+        right: 30px;
+        color: #f5f5f5;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+}
+
+#welcome{
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    span{
+        padding-left: 34px;
+        font-size: 0.6875em;
+        color: $text-color;
+        font-weight: 400;
+        font-family: $font-family;
+    }
+    .welcome-navigation{
+        display: flex;
+        list-style: none;
+        position: absolute;
+        right: 6%;
+        li{
+            padding-left: 32px; 
+           i{
+            color: $title-color;
+            font-size: 13px;
+            opacity: 0.5;
+            cursor: pointer;
+            @include transition(all 0.3s);
+            &:hover{
+                opacity: 1;
+            }
+            } 
+        }
+        
+    }
+}
+
 #navigation{
     z-index: 4;
     position: relative;
@@ -14,6 +81,13 @@
             max-width: 100%;
         }
     }
+    .navbar-brand1{
+        width: 5%;
+        margin-left: 2%;
+        .logo-dark{
+            max-width: 100%;
+        }
+    }
     .navbar-brand2{
         position: absolute;
         width: 5%;
@@ -21,11 +95,10 @@
         display: none;
         .logo-dark{
             max-width: 100%;
-            
         }
     }
     .navbar-nav{
-        margin-left: 25px;
+        margin-left: 28px;
         .nav-item{
             display: flex;
             padding-left: 10px;
@@ -71,8 +144,45 @@
         }
     }
     .scrolled{
-        background-color: #fdfdfd;
+        background-color: #f8f8f8;
         @include transition(all 0.4);
+    }
+    .shop-card-navbar{
+        margin-top: 54px;
+        background-color: #f8f8f8;
+        .navbar-brand2{
+            display: block;
+        }
+        .nav-item{
+            a{
+                color: #232323;
+                font-size: $heading4;
+                letter-spacing: 1.5px;
+                @include transition(all 0.5s);
+                &:hover{
+                    color: #686868a6;
+                }
+            }
+        }
+        .navbar-right-side{
+            height: 65px;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+            ul{
+                margin-top: 5px;
+                list-style: none;
+                li{
+                    i{
+                        margin-top: 20px;
+                        color: #232323;
+                        padding-right: 30px;
+                        @include transition(all 0.5s);
+                        &:hover{
+                            color: #686868a6;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -609,6 +719,9 @@
                 padding-right: 1.625em;
                 font-family: $font-family;
                 font-style: italic;
+                &:focus{
+                    outline: none;
+                }
             }
             button{
                 border: 1px solid #232323;
@@ -679,260 +792,4 @@
     }
 }
 
-#about-intro{
-    background-image: url("../img/hero5.jpg");
-    padding: 165px 0;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #232323;
-        opacity: 0.8;
-        z-index: 1;
-    }
-    .intro-content{
-        div{
-            z-index: 2;
-            h3{
-                color: #f5f5f5;
-                margin-bottom: 30px;
-                margin-top: 10px;
-                font-size: $heading1;
-                font-family: $title-font;
-                font-weight: 600;
-            }
-            p{
-                font-family: $font-family;
-                font-weight: 400;
-                font-size: $heading2;
-                color: #f5f5f5;
-                opacity: 0.9;
-                line-height: 40px;
-            }
-        }
-    }
-}
 
-#service-cards{
-    background-color: #f8f8f8;
-    margin-top: -6.5em;
-    padding-bottom: 230px;
-    .card{
-        z-index: 3;
-        border: none;
-        .card-icon{
-            background: #f4f4f4;
-            padding: 4.875em 0;
-            i{
-                font-size: 4em;
-                color: $text-color;
-            }
-        }
-        .card-content{
-            padding: 42px 35px;
-            h5{
-                color: #232323;
-                font-size: $text-size;
-                font-weight: 600;
-                font-family: $title-font;
-            }
-            p{
-                color: $text-color;
-                font-size: $text-size;
-                font-family: $font-family;
-                line-height: 1.625em;
-                font-weight: 400;
-                padding-top: 25px;
-            }
-        }
-    }
-    .card4, .card5, .card6{
-        margin-top: 100px;
-    }
-}
-
-#about-parallax{
-    background-image: url("../img/hero8.jpg");
-    position: relative;
-    background-attachment: fixed;
-    height: 369px;
-    .overlay{
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 369px;
-        background-color: #1f1f1fa1;
-        h4{
-            color: #fff;
-            font-size: $heading2;
-            font-weight: 600;
-            font-family: $title-font;
-            line-height: 1.41304348em;
-            padding-top: 140px;
-            padding-bottom: 30px;
-        }
-        a{
-            color: $primary-color;
-            background-color: $secondary-color;
-            padding: 20px 52px;
-            font-size: $heading4;
-            font-weight: 400;
-            text-transform: uppercase;
-            @include buttons();
-            @include transition(all 0.7s);
-            &:hover{
-                background-color: #5974d3;
-            }
-        }
-    }
-}
-
-#contact-intro{
-    background-image: url("../img/hero16.jpg");
-    padding: 160px 0;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    &::after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #232323;
-        opacity: 0.6;
-        z-index: 1;
-    }
-    .about-content{
-        div{
-            z-index: 2;
-            h3{
-                color: #f5f5f5;
-                margin-bottom: 30px;
-                margin-top: 10px;
-                font-size: $heading1;
-                font-family: $title-font;
-                font-weight: 600;
-            }
-            p{
-                font-family: $font-family;
-                font-weight: 400;
-                font-size: $heading2;
-                color: #f5f5f5;
-                opacity: 0.9;
-                line-height: 40px;
-            }
-        }
-    }
-}
-
-#features{
-    .features-content{
-        padding: 6.5em 0;
-        h4{
-            line-height: 1.41304348em;
-            font-weight: 600;
-            font-family: $title-font;
-            padding: 20px 0;
-        }
-        p{
-            color: $text-color;
-            font-size: $text-size;
-            font-family: $font-family;
-        }
-        i{
-            font-size: 4em;
-            padding: 5px 0;
-        }
-    }
-    .features-content2{
-        background-color: #f4f4f4;
-        h4{
-            color: $title-color;
-        }
-    }
-    .features-content3{
-        background-color: #232323;
-        h4{
-            color: #fff;
-        }
-        i{
-            color: #f5f5f5;
-        }
-        p{
-            color: #f5f5f5;
-
-        }
-        a{
-            text-decoration: underline;
-            color: #f5f5f5;
-            &:hover{
-                color: #dddddd;
-            }
-        }
-    }
-}
-
-#contacts{
-    padding: 100px 0;
-    background-color: #f8f8f8;
-    form{
-        i{
-            font-size: $heading2;
-            position: absolute;
-            top: 16px;
-            left: 8%;
-            color: $text-color;
-            opacity: 0.8;
-        }
-        h4{
-            color: $title-color;
-            font-weight: 600;
-            font-family: $title-font;
-        }
-        input{
-            border-radius: 5px;
-            border: none;
-            padding-left: 4.0625em;
-            font-family: $font-family;
-            font-style: italic;
-            width: 100%;
-            
-            height: 52px;
-            &:focus{
-                outline: none;
-            }
-        }
-        .name-icon{
-            left: 4%;
-        }
-        .message-input{
-            padding: 25px 10px 205px 25px;
-        }
-        .submit-btn{
-            color: $primary-color;
-            background-color: $secondary-color;
-            width: 100%;
-            height: 52px;
-            font-size: $heading4;
-            @include buttons();
-            @include transition(all 0.3s);
-            border-radius: 5px;
-            border: 2px solid $secondary-color;
-            text-transform: uppercase;
-            &:hover{
-                background-color: #5974d3;
-                border-color: $secondary-color;
-            }
-        }
-    }
-}

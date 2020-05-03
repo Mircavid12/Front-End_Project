@@ -1,0 +1,114 @@
+#about-intro{
+    background-image: url("../img/hero5.jpg");
+    padding: 165px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #232323;
+        opacity: 0.8;
+        z-index: 1;
+    }
+    .intro-content{
+        div{
+            z-index: 2;
+            h3{
+                color: #f5f5f5;
+                margin-bottom: 30px;
+                margin-top: 10px;
+                font-size: $heading1;
+                font-family: $title-font;
+                font-weight: 600;
+            }
+            p{
+                font-family: $font-family;
+                font-weight: 400;
+                font-size: $heading2;
+                color: #f5f5f5;
+                opacity: 0.9;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+#service-cards{
+    background-color: #f8f8f8;
+    margin-top: -6.5em;
+    padding-bottom: 230px;
+    .card{
+        z-index: 3;
+        border: none;
+        .card-icon{
+            background: #f4f4f4;
+            padding: 4.875em 0;
+            i{
+                font-size: 4em;
+                color: $text-color;
+            }
+        }
+        .card-content{
+            padding: 42px 35px;
+            h5{
+                color: #232323;
+                font-size: $text-size;
+                font-weight: 600;
+                font-family: $title-font;
+            }
+            p{
+                color: $text-color;
+                font-size: $text-size;
+                font-family: $font-family;
+                line-height: 1.625em;
+                font-weight: 400;
+                padding-top: 25px;
+            }
+        }
+    }
+    .card4, .card5, .card6{
+        margin-top: 100px;
+    }
+}
+
+#about-parallax{
+    background-image: url("../img/hero8.jpg");
+    position: relative;
+    background-attachment: fixed;
+    height: 369px;
+    .overlay{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 369px;
+        background-color: #1f1f1fa1;
+        h4{
+            color: #fff;
+            font-size: $heading2;
+            font-weight: 600;
+            font-family: $title-font;
+            line-height: 1.41304348em;
+            padding-top: 140px;
+            padding-bottom: 30px;
+        }
+        a{
+            color: $primary-color;
+            background-color: $secondary-color;
+            padding: 20px 52px;
+            font-size: $heading4;
+            font-weight: 400;
+            text-transform: uppercase;
+            @include buttons();
+            @include transition(all 0.7s);
+            &:hover{
+                background-color: #5974d3;
+            }
+        }
+    }
+}

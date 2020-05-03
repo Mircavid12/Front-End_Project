@@ -1,0 +1,95 @@
+#login{
+    .login-left{
+        background-image: url("../img/hero13.jpg");
+        padding: 400px 0;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .login-right{
+        margin-top: 150px;
+        img{
+            max-height: 3.25em;
+        }
+        p{
+            padding-top: 5px;
+            color: $text-color;
+            font-size: $heading2;
+            font-family: $font-family;
+        }
+        .login-content{
+            form{
+                max-width: 60%;
+                margin-left: 20%;
+            }
+            label{
+                display: block;
+                font-size: $heading4;
+                font-family: $title-font;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-left: 20px;
+                position: absolute;
+                left: 7%;
+                top: 30px;
+            }
+            i{
+                margin-left: 1.1304347826087em;
+                position: absolute;
+                top: 75px;
+                font-size: $heading2;
+            }
+            input{
+                margin-top: 60px;
+                width: 90%;
+                background: #f8f8f8;
+                height: 52px;
+                border-radius: 50px;
+                border: none;
+                padding-left: 4.0625em;
+                font-family: $font-family;
+                &:focus{
+                    outline: none;
+                    box-shadow: 0px 0px 0px 0px #e7e7e7;
+                }
+            }
+            .check{
+                padding: 0 110px;
+                #check-input{
+                    height: 30px;
+                    margin-top: 10px;
+                    width: 30px;
+                    border-radius: 50%;
+                }
+                span{
+                    color: $text-color;
+                    font-size: 12px;
+                    font-family: $font-family;
+                    width: 100%;
+                    margin-top: 15px;
+                   margin-left: 10px;
+                }
+            }
+            button{
+                color: $primary-color;
+                background-color: $secondary-color;
+                padding: 18px 0px;
+                font-size: $heading4;
+                width: 90%;
+                text-transform: uppercase;
+                @include buttons();
+                @include transition(all 0.7s);
+                &:hover{
+                    background-color: #5974d3;
+                }
+            }
+            p{
+                font-size: 0.6875em;
+                a{
+                    color: $text-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
